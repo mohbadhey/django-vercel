@@ -16,7 +16,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/staticfiles_build/$1"
+      "dest": "/foodrec/wsgi.py"
     }
   ]
 }
