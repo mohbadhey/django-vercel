@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'foodrec.settings')
@@ -17,6 +16,10 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+    if len(sys.argv) > 1 and sys.argv[1] == 'runserver':
+        # Automatically open the browser when running the development server
+        import webbrowser
+        webbrowser.open('http://127.0.0.1:8000/')
 
 if __name__ == '__main__':
     main()
