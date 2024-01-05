@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'l#()$jrfbxp-k_9!_^!uz(=9u^q6mfp(=2(m_7pu5xw4v@ou8p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.versel.app', '127.0.0.1']
 
