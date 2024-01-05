@@ -19,7 +19,7 @@ from .views import home
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("",include("recommender.urls")),
-    path('',home),
+     path('admin/', admin.site.urls),
+    path('', home),  # Place this before the include pattern
+    path('', include("recommender.urls")),
 ]
