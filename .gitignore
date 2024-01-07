@@ -1,7 +1,9 @@
-#
 # Environments
 *.env
-bin/
-lib/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 *.sqlite3
 .vercel
+venv/
