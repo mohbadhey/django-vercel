@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -81,9 +82,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER' : 'postgres',
-        'PASSWORD': 'eefbCF-2gf3F6*6-edE1*gFBBea31AA2',
+        'PASSWORD': '33e-5E4CaCGfEBbD3114e1C4B-26CaEa',
         'HOST' : 'monorail.proxy.rlwy.net',
-        'PORT' : '44450',
+        'PORT' : '32919',
        
          
     }
@@ -144,13 +145,21 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #added manually
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
+# STATIC_URL = '/static/'
+# STATIC_ROOT = BASE_DIR / "staticfiles"
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static"
 # ]
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 
 # BASE_DIR = Path(__file__).resolve().parent.parent
